@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SecureBank Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>SecureBank Dashboard</h1>
+<a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    <p>Welcome to your account!</p>
+
+    <div class="account">
+        <h2>Available Balance</h2>
+        <h1>₹{{ "{:,}".format(balance) }}</h1>
+    </div>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <div class="actions">
+        <h2>Banking Services</h2>
+
+        <form action="/deposit" method="POST">
+            <h3>Deposit Money</h3>
+            <input type="number" name="amount"
+                   placeholder="Enter amount" min="1" step="1" required>
+            <button type="submit">Deposit</button>
+        </form>
+
+        <form action="/withdraw" method="POST">
+            <h3>Withdraw Money</h3>
+            <input type="number" name="amount"
+                   placeholder="Enter amount" min="1" step="1" required>
+            <button type="submit">Withdraw</button>
+        </form>
+    </div>
+
+    <h2>Recent Transactions</h2>
+
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Transaction</th>
+            <th>Amount</th>
+        </tr>
+
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.date }}</td>
+            <td>{{ transaction.type }}</td>
+            <td>₹{{ "{:,}".format(transaction.amount) }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

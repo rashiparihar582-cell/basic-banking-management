@@ -1,0 +1,108 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf0f8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #12345a;
+    margin-top: 60px;
+}
+
+p {
+    color: #555555;
+}
+
+form {
+    background-color: white;
+    width: 300px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #cccccc;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #12345a;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #245a8d;
+}
+
+.account {
+    background-color: #12345a;
+    color: white;
+    padding: 25px;
+    margin: 30px auto;
+    width: 300px;
+    border-radius: 12px;
+}
+
+.actions {
+    margin: 30px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 70%;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #12345a;
+    color: white;
+}
+.account h1 {
+    color: white;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.account h2 {
+    color: white;
+}
+.logout-btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+

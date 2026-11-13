@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Banking Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to SecureBank</h1>
+
+    <p>Please log in to continue</p>
+
+    <form action="/" method="POST">
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+        <label>Username:</label>
+        <input type="text" name="username">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password">
+        <br><br>
+
+        <button type="submit">Login</button>
+    <form action="/" method="POST">
+
+</body>
+</html>
+
